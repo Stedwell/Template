@@ -1,0 +1,155 @@
+%-----------------------------------------------------------------------
+% SPSU TEMPLATE
+%
+% TEMPLATE
+%
+% author:         
+% email:          
+%
+% date created:   
+% date modified:	
+%
+% NOTE: You will be yelled at if you do not maintain a 72 character
+% width on this document, unless otherwise unavoidable. All necessary
+% files should be stored in the same directory as this file.
+% - Bennett Stedwell
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% Document Format
+% A4 paper with 11pt Sans Serif Font
+%-----------------------------------------------------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1in, head=50pt, foot=50pt]{geometry}
+\setlength \parindent{0pt}
+
+\usepackage{abstract}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{array}
+\usepackage[english]{babel} 
+\usepackage{booktabs}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lastpage}
+\usepackage{lettrine}
+\usepackage{lipsum}
+\usepackage[framed]{mcode}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{sectsty}
+\usepackage{siunitx}
+\usepackage{subfig}
+%\usepackage[svgnames]{xcolor}
+\usepackage{titling}
+
+\pagestyle{fancy}
+\renewcommand{\familydefault}{\sfdefault}
+
+%-----------------------------------------------------------------------
+% More SPSU colors at:
+% http://www.spsu.edu/marketing/visual_identity/academic_style_guide/index.htm
+%-----------------------------------------------------------------------
+
+\definecolor{spsu-dark}{RGB}{0,136,82}
+\definecolor{spsu-light}{RGB}{109,179,63}
+\definecolor{spsu-grey}{RGB}{147,155,161}
+
+\sectionfont{\color{spsu-dark}}
+\subsectionfont{\color{spsu-dark}}
+\subsubsectionfont{\color{spsu-dark}}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\arraystretch}{1.2}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\lstset
+{
+  language=Matlab,        % choose the language of the code
+  tabsize=2,              % sets default tabsize to 2 spaces
+  breaklines=true,        % sets automatic line breaking
+  breakatwhitespace=true, % sets if automatic breaks should only happen at whitespace
+  frame=single,           % create a single frame around all code
+}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+%-----------------------------------------------------------------------
+% These are the headers
+%-----------------------------------------------------------------------
+\lhead{\footnotesize TEMP 0000: Course Name}
+\chead{}
+\rhead{\includegraphics[width=1cm]{SPSU_Logo.png}}
+
+%-----------------------------------------------------------------------
+% These are the footers
+%-----------------------------------------------------------------------
+\lfoot{\footnotesize Author Name}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}}
+
+%-----------------------------------------------------------------------
+%	Title Section
+%-----------------------------------------------------------------------
+
+\newcommand{\HorRule}{\color{spsu-dark} \rule{\linewidth}{1pt}}
+
+\pretitle{
+\begin{centering}
+	\HorRule
+	\fontsize{25}{25}
+	\color{spsu-dark}
+	\selectfont}
+
+	\title{Bottle Filling Station}
+
+\posttitle{\par\end{centering}\vskip 0.5em}
+
+\preauthor{
+	\begin{centering}
+	\large
+	\lineskip 0.5em
+	\color{black}}
+
+	\author{Author Name}
+
+\postauthor{
+	\footnotesize
+	\color{spsu-dark}
+	% If we need anything after our names
+
+\par\end{centering}\HorRule}
+
+%-----------------------------------------------------------------------
+% Document
+%-----------------------------------------------------------------------
+\begin{document}
+
+\vfill
+\maketitle
+\thispagestyle{fancy}
+\thispagestyle{empty}
+
+\input{TEMPLATE.tex}
+
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+\newpage
+\bibliographystyle{amsplain}
+\bibliography{references}
+
+\end{document}
+% EoF
